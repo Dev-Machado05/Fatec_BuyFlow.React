@@ -5,6 +5,7 @@ import './index.css';
 import LoginPage from './Pages/LoginPage.jsx'
 import SignUpPage from './Pages/SiginUpPage.jsx'
 import UserHome from './Pages/UserHome.jsx';
+import Products from './Pages/Product.jsx';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     {
       path: "/Home",
       element: <UserHome />
+    },
+    {
+      path: "/home/*",
+      element: <Products />
     },
 ]);
 

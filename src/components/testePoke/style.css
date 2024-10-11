@@ -23,5 +23,6 @@
 
 .Poke-content {
     display: flex;
+    gap: 0.7vw;
     animation: scroll 15s linear infinite;
 }

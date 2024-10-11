@@ -1,16 +1,18 @@
 import React from "react";
 import Logo from "../../assets/image/Logo1.jpeg";
 import UserIcon from "../../assets/image/user.png";
-import SearchBt from "../../assets/image/Vector.svg"
+import SearchBt from "../../assets/image/Vector.svg";
 import "./style.css";
 
 export default function Header2() {
   return (
     <div className="HeaderContainer2">
-      <div className="LogoContainer2">
-        <img src={Logo} alt="Icone da logo" />
-        <p>BuyFlow</p>
-      </div>
+      <a href="\home">
+        <div className="LogoContainer2">
+          <img src={Logo} alt="Icone da logo" />
+          <p>BuyFlow</p>
+        </div>
+      </a>
 
       <div className="SearchBar">
         <input type="text" name="" id="" />

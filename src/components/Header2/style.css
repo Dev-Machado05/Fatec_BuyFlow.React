@@ -46,15 +46,27 @@
 }
 
 .SearchBar {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    background-color: white;
+    border-radius: 5px;
     input {
-        height: 2.4vh;
+        height: 2.7vh;
+        width: 17vw;
         border: none;
     }
 
     button {
-        height: 2.4vh;
-        width: 2.4vh;
+        height: 2.7vh;
+        width: 2.7vh;
         border: none;
+        background-color: white;
+    }
+
+    img {
+         height: 1.5vh;
+         width: auto;
     }
 }
 

@@ -10,7 +10,7 @@ export default function UserHome() {
       <Header />
       <div className="Main-content">
         <div className="Title">
-          <h3 className="Temas">Produtos</h3>
+          <h3>Produtos</h3>
           <div className="BlueLine" />
         </div>
         <div className="products">
