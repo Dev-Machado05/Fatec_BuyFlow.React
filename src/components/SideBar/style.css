@@ -1,0 +1,35 @@
+.SideBar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  height: 40%;
+  width: 15%;
+  z-index: +1;
+  justify-content: space-between;
+  background-color: rgba(15, 16, 44, 1);
+  padding: 10px;
+
+  button {
+    font-weight: 800;
+    width: 263px;
+    height: 65px;
+    border: 2px solid #000000;
+    color: white;
+  }
+}
+
+.Navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  button {
+    background: #1a1b45;
+  }
+
+}
+
+.LogoffButton {
+    background: rgba(136, 0, 0, 1);
+}
