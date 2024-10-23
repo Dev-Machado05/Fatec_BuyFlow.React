@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header2/index";
+import Carroussel from "../components/carroussel";
 import TestePoke from "../components/testePoke/index";
 import Highlights from "../components/Highlights";
 import "../Styles/UserHome.css";
@@ -14,7 +15,8 @@ export default function UserHome() {
           <div className="BlueLine" />
         </div>
         <div className="products">
-          <TestePoke />
+          <Carroussel />
+          {/* <TestePoke /> */}
         </div>
         <div className="Title">
           <h3>destaques</h3>

@@ -1,0 +1,36 @@
+@keyframes scrollcr {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-210%);
+    }
+}
+
+.carroussel {
+    display: flex;
+    gap: 3vw;
+    animation: scrollcr 40s linear infinite;
+}
+
+.carrousselItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    width: 100%;
+    background-color: #dddfec;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 2vh 1vw;
+    color: black;
+  
+    img {
+      width: 10vw;
+    }
+  
+    h2 {
+      margin: 20px 0;  
+    }
+  }

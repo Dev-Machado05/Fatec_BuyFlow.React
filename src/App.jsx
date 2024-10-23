@@ -6,6 +6,7 @@ import LoginPage from './Pages/LoginPage.jsx'
 import SignUpPage from './Pages/SiginUpPage.jsx'
 import UserHome from './Pages/UserHome.jsx';
 import Products from './Pages/Product.jsx';
+import AdmHome from './Pages/AdmHome.jsx';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     {
       path: "/home/*",
       element: <Products />
+    },
+    {
+      path: "/AdmHome/*",
+      element: <AdmHome />
     },
 ]);
 
