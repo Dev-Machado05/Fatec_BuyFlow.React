@@ -14,7 +14,7 @@ export default function SideBar() {
                 window.location.href = "/Carrinho";
                 break;
             case 4:
-                window.location.href = "/Sobre";
+                window.location.href = "/About";
                 break;
             default:
                 break;

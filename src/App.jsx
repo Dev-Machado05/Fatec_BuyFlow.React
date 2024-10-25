@@ -7,6 +7,8 @@ import SignUpPage from './Pages/SiginUpPage.jsx'
 import UserHome from './Pages/UserHome.jsx';
 import Products from './Pages/Product.jsx';
 import AdmHome from './Pages/AdmHome.jsx';
+import About from './Pages/About.jsx';
+import Error from './Pages/Error.jsx';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
     {
       path: "/AdmHome/*",
       element: <Products />
+    },
+    {
+      path: "/About",
+      element: <About />
+    },
+    {
+      path: "*",
+      element: <Error />
     },
 ]);
 

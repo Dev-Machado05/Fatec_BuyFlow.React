@@ -29,12 +29,6 @@ export default function Header2() {
             <img src={SearchBt} alt="" />
           </button>
         </div>
-        {/* Implementar a side bar */}
-        {/* <nav>
-                <a href=""><strong>Home</strong></a>
-                <a href="">Compras</a>
-                <a href="">Sobre</a>
-            </nav> */}
         <button className="UserAccount" onClick={ChangeDisplay}>
           <p>User</p>
           <img src={UserIcon} alt="Imagem do usuário" />
