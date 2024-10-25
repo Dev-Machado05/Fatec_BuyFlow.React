@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../components/Header2/index";
+import Header from "../components/Header2";
 import Carroussel from "../components/carroussel";
-import TestePoke from "../components/testePoke/index";
 import Highlights from "../components/Highlights";
+import Footer from "../components/Footer"
 import "../Styles/UserHome.css";
 
 export default function UserHome() {
@@ -16,7 +16,6 @@ export default function UserHome() {
         </div>
         <div className="products">
           <Carroussel />
-          {/* <TestePoke /> */}
         </div>
         <div className="Title">
           <h3>destaques</h3>
@@ -26,6 +25,7 @@ export default function UserHome() {
           <Highlights />
         </div>
       </div>
+      {/* <Footer /> */}
     </div>
   );
 }
