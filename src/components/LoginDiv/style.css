@@ -50,6 +50,12 @@
     }
 }
 
+.Error-Text {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 .AContainer{
     display: flex;
     flex-direction: column;
