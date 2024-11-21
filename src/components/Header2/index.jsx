@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assets/image/Logo1.jpeg";
 import UserIcon from "../../assets/image/user.png";
 import SearchBt from "../../assets/image/Vector.svg";
@@ -6,9 +6,20 @@ import SideBar from "../SideBar";
 import "./style.css";
 
 export default function Header2() {
-  
+
   const [display, setDisplay] = useState(false);
+  const [UserName, setUserName] = useState('');
+  const [Commercial, setCommercial] = useState(false);
   
+  useEffect(() => {
+    const ConnectedUserCommercial = localStorage.getItem('userCommercial');
+    const ConnectedUserName = localStorage.getItem('userName');
+    if (ConnectedUserName) {
+      setUserName(ConnectedUserName);
+      setCommercial(ConnectedUserCommercial);
+    }  
+  }, []);
+
   function ChangeDisplay() {
   setDisplay(!display);
   }
@@ -30,7 +41,7 @@ export default function Header2() {
           </button>
         </div>
         <button className="UserAccount" onClick={ChangeDisplay}>
-          <p>User</p>
+          <p>{ UserName }</p>
           <img src={UserIcon} alt="Imagem do usuário" />
         </button>
       </div>

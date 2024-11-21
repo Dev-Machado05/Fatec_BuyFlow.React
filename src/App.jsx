@@ -9,6 +9,7 @@ import Products from './Pages/Product.jsx';
 import AdmHome from './Pages/AdmHome.jsx';
 import About from './Pages/About.jsx';
 import Error from './Pages/Error.jsx';
+import EmpProducts from './Pages/EmpProduct.jsx'
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -33,20 +34,20 @@ const router = createBrowserRouter([
         element: <SignUpPage />,
     },
     {
-      path: "/Home",
+      path: "/Home/*",
       element: <UserHome />
     },
     {
-      path: "/Home/*",
+      path: "/Home/Product/*",
       element: <Products />
-    },
-    {
-      path: "/AdmHome",
-      element: <AdmHome />
     },
     {
       path: "/AdmHome/*",
-      element: <Products />
+      element: <AdmHome />
+    },
+    {
+      path: "/AdmHome/Product/*",
+      element: <EmpProducts />
     },
     {
       path: "/About",

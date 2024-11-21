@@ -1,6 +1,8 @@
 import "./style.css";
 
-export default function SideBar() {
+export default function SideBar({ Commercial }) {
+
+
     
     function SwitchPage(pg) {
         switch (pg) {
@@ -8,7 +10,11 @@ export default function SideBar() {
                 window.location.href = "/";
                 break;
             case 2:
-                window.location.href = "/Home";
+                if (Commercial === false) {
+                    window.location.href = "/Home";
+                } else {
+                    window.location.href = "/AdmHome";
+                }
                 break;
             case 3:
                 window.location.href = "/Carrinho";

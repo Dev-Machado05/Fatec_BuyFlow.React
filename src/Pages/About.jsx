@@ -1,5 +1,6 @@
 import "../Styles/About.css";
 import Header from "../components/Header2";
+import Footer from "../components/Footer"
 
 export default function About() {
   return (
@@ -12,6 +13,7 @@ export default function About() {
           software e como ele funciona.
         </p>
       </div>
+      <Footer />
     </div>
   );
 }
