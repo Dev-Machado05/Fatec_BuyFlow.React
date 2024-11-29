@@ -12,19 +12,34 @@
 .Prod {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: space-between;
   gap: 1vh;
   background-color: #dddfec;
   border: solid 1px black;
   border-radius: 5px;
   padding: 4vh 1vw;
   color: black;
+  min-height: 90%;
 
   img {
     width: 95%;
+    max-width: 14vw;
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  
+  span {
+    font-size: 19px;
+    font-weight: 900;
+    color: rgb(0, 128, 0);
   }
 
   h2 {
+    font-size: 23px;
     margin: 20px 0;  
   }
 }

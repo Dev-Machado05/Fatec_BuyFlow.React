@@ -1,42 +1,25 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-// import { getUsers } from "../../backend/server.js"
+import React, { useEffect, useState } from "react";
 import "./style.css";
-/////
 
-import { initializeApp  } from "firebase/app";
-import { getFirestore, getDocs, collection, doc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore, getDocs, collection } from "firebase/firestore";
 
-const firebaseApp = initializeApp ({
+const firebaseApp = initializeApp({
   apiKey: "AIzaSyBoItkTZ55gznQwGMIz_gFTgLvSOO62jTI",
-  // authDomain: "buyflow-edc53.firebaseapp.com",
   databaseURL: "https://buyflow-edc53-default-rtdb.firebaseio.com",
   projectId: "buyflow-edc53",
-  // storageBucket: "buyflow-edc53.firebasestorage.app",
-  // messagingSenderId: "837926171347",
-  // appId: "1:837926171347:web:e2a9e9c3dd3e038effda26"
 });
 
 const db = getFirestore(firebaseApp);
-const userCollectionRef = collection(db, "Users")
-
-
-
-/////
-
-
-
-
+const userCollectionRef = collection(db, "Users");
 
 export default function LoginDiv() {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [UsersDatabase, setUsersDatabase] = useState([]);
-  const [User, setUser] = useState([]);
-  const [ErrorDisplay, setErrorDisplay] = useState([]);
-  let UserIndex = 0;
-  ///////
-  
+  const [User, setUser] = useState(null);
+  const [ErrorDisplay, setErrorDisplay] = useState(false);  
+
   useEffect(() => {
     const getUsers = async () => {
       const Data = await getDocs(userCollectionRef);
@@ -45,35 +28,32 @@ export default function LoginDiv() {
     getUsers();
   }, []);
 
-
-  ////////
   function UserVerifier() {
     if (Username === "") return false;
 
     for (let i = 0; i < UsersDatabase.length; i++) {
-      if ((Username === UsersDatabase[UserIndex].Name || Username === UsersDatabase[UserIndex].Email) && UsersDatabase[UserIndex].Password === Password) {
-        setUser(UsersDatabase[UserIndex]);
-        UserIndex = i;
-        return true; 
+      const user = UsersDatabase[i];
+      if ((Username === user.Name || Username === user.Email) && user.Password === Password) {
+        setUser(user);
+        return i;  
       }
-      UserIndex++;
     }
-    return false;
+    return -1;
   }
 
-  
   function verify() {
-    if (UserVerifier()) {
-      if (UsersDatabase[UserIndex].Commercial) {
-        window.location.href = `/AdmHome/${UserIndex}`;
+    const userIndex = UserVerifier();
+
+    if (userIndex !== -1) {
+      if (UsersDatabase[userIndex].Commercial) {
+        window.location.href = `/AdmHome/${userIndex}`;
       } else {
-        window.location.href = `/Home/${UserIndex}`;
+        window.location.href = `/Home/${userIndex}`;
       }
     } else {
       setErrorDisplay(true);
     }
   }
-
 
   return (
     <div className="login-div">
@@ -98,14 +78,13 @@ export default function LoginDiv() {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
             />
-          { ErrorDisplay === true ? <p className="Error-Text">Usuário ou senha inválidos</p> :
-            null }
+            {ErrorDisplay && <p className="Error-Text">Usuário ou senha inválidos</p>}
           </div>
         </div>
 
         <div className="AContainer">
           <a href="/Sign-Up">Criar uma conta</a>
-          <a href="">Esqueceu a senha</a>
+          <a href="#">Esqueceu a senha</a>
         </div>
 
         <button className="SubmitButton" onClick={verify}>

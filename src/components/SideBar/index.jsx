@@ -1,8 +1,9 @@
 import "./style.css";
 
 export default function SideBar({ Commercial }) {
-
-
+    
+    const urlAtual = window.location.href;
+    const page = urlAtual.split("/")[3]; 
     
     function SwitchPage(pg) {
         switch (pg) {
@@ -22,6 +23,9 @@ export default function SideBar({ Commercial }) {
             case 4:
                 window.location.href = "/About";
                 break;
+            case 5:
+                window.location.href = "/AdmHome/NwProduct";
+                break;
             default:
                 break;
         }
@@ -33,6 +37,11 @@ export default function SideBar({ Commercial }) {
         <button onClick={() => SwitchPage(2)}>Home</button>
         <button onClick={() => SwitchPage(3)}>Carrinho</button>
         <button onClick={() => SwitchPage(4)}>Sobre nós</button>
+        {
+            page === "AdmHome" ?  
+            <button onClick={() => SwitchPage(5)}>Criar Produto</button> :
+            null
+        }
       </div>
 
       <button className="LogoffButton" onClick={() => SwitchPage(1)}>Desconectar</button>

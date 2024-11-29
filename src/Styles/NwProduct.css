@@ -1,0 +1,45 @@
+.NwContainer {
+  height: 100%;
+}
+
+.NwContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 65%;
+  padding: 6% 3%;
+  justify-content: space-between;
+
+  section {
+    height: 75%;
+    width: 30%;
+    padding: 3vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 17px;
+    border: solid black 1px;
+    background-color: rgb(255, 255, 255);
+}
+table {
+      height: 80%;
+      width: 100%;
+  }
+}
+.NwInputContainer {
+    width: 18vw;
+
+    input {
+        width: 100%;
+    }
+}
+
+.Checkbox {
+    display: flex;
+    gap: 10px
+}
+.submit {
+  width: 5vw;
+  height: 5vh;
+  align-self: self-end;
+}

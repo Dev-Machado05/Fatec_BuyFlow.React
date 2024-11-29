@@ -4,6 +4,10 @@ import LoginDiv from '../components/LoginDiv/index.jsx';
 import '../Styles/LoginPage.css';
 
 export default function LoginPage() {
+
+  localStorage.removeItem('userName');
+  localStorage.removeItem('userCommercial');
+
   return (
     <div className='AppContainer'>
       <Header />

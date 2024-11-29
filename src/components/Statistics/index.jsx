@@ -5,7 +5,7 @@ export default function Statistics() {
     return(
         <div className="statistics">
             {Array.from({ length: 20 }).map((_, i) => (
-                <a href={`/AdmHome/${i}`}>
+                <a href={`/AdmHome/Product/${i}`}>
                     <div className="ProdData">
                         <img src={ExImage2} alt="" />
                         <h2>Produto {i}</h2>
