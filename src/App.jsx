@@ -10,6 +10,7 @@ import AdmHome from './Pages/AdmHome.jsx';
 import About from './Pages/About.jsx';
 import Error from './Pages/Error.jsx';
 import EmpProducts from './Pages/EmpProduct.jsx'
+import NwProduct from './Pages/NwProduct.jsx';
 
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡶⢶⣾⠻⣦⡀⠀⠀⠀⠀⠀
 //⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠋⠀⠀⠙⢶⡾⠃⠀⠀⠀⠀⠀
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
     {
       path: "/AdmHome/Product/*",
       element: <EmpProducts />
+    },
+    {
+      path: "/AdmHome/NwProduct",
+      element: <NwProduct />
     },
     {
       path: "/About",

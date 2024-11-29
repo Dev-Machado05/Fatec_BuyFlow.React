@@ -26,11 +26,11 @@ export default function AdmHome() {
 
     useEffect(() => {
         if (UsersDatabase.length > 0) {
-          const user = UsersDatabase[UserIndex]; // Acesse o usuário com base no índice
-          setUser(user); // Atualize o estado do usuário com os dados corretos
+          const user = UsersDatabase[UserIndex]; 
+          setUser(user); 
           if (user) {
-            localStorage.setItem('userName', user.Name); // Salve os dados no localStorage
-            localStorage.setItem('userCommercial', user.Commercial);
+            localStorage.setItem('userName', User.Name);
+            localStorage.setItem('userCommercial', User.Commercial);
           }
         }
       }, [UsersDatabase, UserIndex]);
