@@ -6,7 +6,7 @@ import Highlights from "../components/Highlights";
 import "../Styles/UserHome.css";
 import { collection, getFirestore, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
-import { db, userCollectionRef, productCollectionRef } from "../backend/server"
+import { db, userCollectionRef, productCollectionRef } from "../backend/server";
 
 // const firebaseApp= initializeApp ({
 //   apiKey: "AIzaSyBoItkTZ55gznQwGMIz_gFTgLvSOO62jTI",
@@ -40,10 +40,10 @@ export default function UserHome() {
 
   useEffect(() => {
     if (UsersDatabase.length > 0) {
-      const user = UsersDatabase[UserIndex]; // Acesse o usuário com base no índice
-      setUser(user); // Atualize o estado do usuário com os dados corretos
+      const user = UsersDatabase[UserIndex];
+      setUser(user); 
       if (user) {
-        localStorage.setItem('userName', user.Name); // Salve os dados no localStorage
+        localStorage.setItem('userName', user.Name);
         localStorage.setItem('userCommercial', user.Commercial);
       }
     }

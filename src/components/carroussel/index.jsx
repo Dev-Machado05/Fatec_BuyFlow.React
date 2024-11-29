@@ -32,8 +32,8 @@ export default function Carroussel({ Items }) {
               <h2>{item.Nome}</h2>
               {
               item.Desconto 
-                ? <p><span>De:</span> {item.Preco},00<br /><span>Por:</span> {NwPreco[i]},00</p> 
-                : <p><span>R$: </span>{item.Preco},00</p>
+                ? <p><span>De:</span> {item.Preco}<br /><span>Por:</span> {NwPreco[i]}</p> 
+                : <p><span>R$: </span>{item.Preco}</p>
             }
             </div>
           </a>
@@ -45,8 +45,8 @@ export default function Carroussel({ Items }) {
               <h2>{item.Nome}</h2>
               {
               item.Desconto 
-                ? <p><span>De:</span> {item.Preco},00<br /><span>Por:</span> {NwPreco[i]},00</p> 
-                : <p><span>R$: </span>{item.Preco},00</p>
+                ? <p><span>De:</span> {item.Preco}<br /><span>Por:</span> {NwPreco[i]}</p> 
+                : <p><span>R$: </span>{item.Preco}</p>
             }
             </div>
           </a>
