@@ -1,0 +1,28 @@
+
+.HeaderContainer{
+    height: 65px;
+    display: flex;
+    background-color: #0f102c;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vh;
+}
+
+.LogoContainer {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+
+    img { 
+        border-radius: 25px;
+        max-height: 48px;
+    }
+    
+    p {
+        color: white;
+        font-size: 3vh;
+        font-family: Josefin_Sans;
+        font-weight: 400;
+        font-style: italic;
+    }
+}

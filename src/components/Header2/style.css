@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Josefin_Sans';
+    src: url(../../assets/fonts/Josefin_Sans/static/JosefinSans-Italic.ttf);
+    font-style: italic;
+}
+
+.HeaderContainer2{
+    min-height: 8vh;
+    display: flex;
+    background-color: #0f102c;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+
+.LogoContainer2 {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+
+    img {
+        border-radius: 25px;
+        max-height: 48px;
+    }
+
+    p {
+        color: white;
+        font-size: 3vh;
+        font-family: 'Josefin_Sans';
+        font-weight: 400;
+        font-style: italic;
+    }
+}
+
+.HeaderContainer2{
+
+    nav {
+        display: flex;
+        gap: 2vh;
+    }
+
+    a {
+        color: white;
+        font-size: 1.8vh;
+    }
+}
+
+.SearchBar {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    background-color: white;
+    border-radius: 5px;
+    input {
+        height: 2.7vh;
+        width: 17vw;
+        border: none;
+    }
+
+    button {
+        height: 2.7vh;
+        width: 2.7vh;
+        border: none;
+        background-color: white;
+    }
+
+    img {
+         height: 1.5vh;
+         width: auto;
+    }
+}
+
+.UserAccount {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    background-color: #00000000;
+    border: none;
+
+    img {
+        max-height: 5vh;
+    }
+
+    p {
+        color: white;
+        font-size: 2.7vh;
+        font-weight: 400;
+    }
+}

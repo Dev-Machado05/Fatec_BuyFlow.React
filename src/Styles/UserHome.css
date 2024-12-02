@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.Main-content {
+    width: 100%;
+}
+
+.BlueLine {
+    background-color: #0F102C;
+    width: 90%;
+    height: 12px;
+    display: flex;
+    justify-self: center;
+}
+
+.Title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0F102C;
+    margin: 25px 0;
+    gap: 10px
+}

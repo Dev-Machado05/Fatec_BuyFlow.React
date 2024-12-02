@@ -1,0 +1,27 @@
+.statistics {
+  margin: 1.18%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 50fr));
+  gap: 1.13%;
+  justify-content: center;
+}
+
+.ProdData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+  background-color: #dddfec;
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 4vh 1vw;
+  color: black;
+
+  img {
+    width: 95%;
+  }
+
+  h2 {
+    margin: 20px 0;
+  }
+}

@@ -1,0 +1,28 @@
+.poke-container {
+    border: solid black 1px;
+    border-radius: 2vh;
+    width: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images-container {
+    display: flex;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.Poke-content {
+    display: flex;
+    gap: 0.7vw;
+    animation: scroll 15s linear infinite;
+}
